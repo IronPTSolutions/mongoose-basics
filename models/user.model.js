@@ -9,8 +9,8 @@ const userSchema = new mongoose.Schema({
     email: {
         type: String,
         required: true,
-        unique: false,
-        match: [/^\w+@\w+\.\w{2,6}$/, 'Invalid email pattern']
+        unique: true,
+        match: [/^\w+([\.-]\w+)*@\w+\.\w{2,6}$/, 'Invalid email pattern']
     },
     age: Number,
     married: {

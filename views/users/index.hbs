@@ -1,0 +1,12 @@
+<form action="/users" method="GET">
+    <label for="age">Age</label>
+    <input type="number" name="age" />
+    <label for="age">Name</label>
+    <input type="text" name="name" />
+    <button type="submit">Search</button>
+</form>
+<ul>
+    {{#each users }}
+        <li> {{ this.name }} ({{ this.age }}) - {{ this.email }} <a href="/users/{{ this.email }}">Details</a></li>
+    {{/each }}
+</ul>
